@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/header/Header';
 import SantaInfo from '../components/info/SantaInfo';
 import Nav from '../components/nav/Nav';
 
@@ -15,12 +14,15 @@ const SantaDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    background-size: cover;
+  }
 `;
 
 function Santa() {
   return (
     <SantaDiv>
-      <Header />
       <Nav />
       <SantaInfo />
     </SantaDiv>

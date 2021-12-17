@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/header/Header';
 import SleighInfo from '../components/info/SleighInfo';
 import Nav from '../components/nav/Nav';
 
@@ -15,12 +14,15 @@ const SleighDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    background-size: cover;
+  }
 `;
 
 function Sleigh() {
   return (
     <SleighDiv>
-      <Header />
       <Nav />
       <SleighInfo />
     </SleighDiv>

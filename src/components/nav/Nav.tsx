@@ -5,6 +5,7 @@ const NavDiv = styled.div`
   float: left;
   width: 20%;
   height: 100vh;
+
   ul {
     padding: 20px 60px;
     li {
@@ -12,6 +13,21 @@ const NavDiv = styled.div`
       font-size: 64px;
       font-weight: 800;
       cursor: pointer;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    ul {
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      li {
+        font-size: 15px;
+        margin: 5px;
+      }
     }
   }
 `;
@@ -23,6 +39,7 @@ const NavLink = styled(Link)`
     color: gold;
   }
 `;
+
 function Nav() {
   return (
     <NavDiv>
