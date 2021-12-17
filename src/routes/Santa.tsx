@@ -5,6 +5,8 @@ import SantaInfo from '../components/info/SantaInfo';
 import Nav from '../components/nav/Nav';
 
 const SantaDiv = styled.div`
+  position: absolute;
+  width: 100%;
   background-image: url('/assets/img/santa.jpg');
   height: 100vh;
   background-position: center;

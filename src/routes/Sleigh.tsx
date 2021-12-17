@@ -5,6 +5,8 @@ import SleighInfo from '../components/info/SleighInfo';
 import Nav from '../components/nav/Nav';
 
 const SleighDiv = styled.div`
+  position: absolute;
+  width: 100%;
   background-image: url('/assets/img/sleigh2.jpg');
   height: 100vh;
   background-position: center;

@@ -5,6 +5,8 @@ import RudolfInfo from '../components/info/RudolfInfo';
 import Nav from '../components/nav/Nav';
 
 const RudolfDiv = styled.div`
+  position: absolute;
+  width: 100%;
   background-image: url('/assets/img/rudolf.jpg');
   height: 100vh;
   background-position: center;

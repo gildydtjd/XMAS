@@ -28,16 +28,16 @@ function Nav() {
     <NavDiv>
       <ul>
         <li>
-          <NavLink to="/santa">SANTA</NavLink>
+          <NavLink to="/Santa">SANTA</NavLink>
         </li>
         <li>
-          <NavLink to="/rudolf">RUDOLF</NavLink>
+          <NavLink to="/Rudolf">RUDOLF</NavLink>
         </li>
         <li>
-          <NavLink to="/sleigh">SLEIGH</NavLink>
+          <NavLink to="/Sleigh">SLEIGH</NavLink>
         </li>
         <li>
-          <NavLink to="/gift">GIFT</NavLink>
+          <NavLink to="/Gift">GIFT</NavLink>
         </li>
       </ul>
     </NavDiv>
