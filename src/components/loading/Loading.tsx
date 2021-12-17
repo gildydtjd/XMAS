@@ -9,11 +9,15 @@ const Flex = styled.div`
   height: 100vh;
 `;
 
+const LoadingDiv = styled.div`
+  text-align: center;
+`;
+
 const LoadingSanta = styled.div`
   background-image: url('assets/img/santa-icon.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 200px;
+  width: 100%;
   height: 200px;
 `;
 
@@ -25,8 +29,10 @@ function Loading() {
   }, [history]);
   return (
     <Flex>
-      <LoadingSanta />
-      <h2>MERRY CHRISTMAS</h2>
+      <LoadingDiv>
+        <LoadingSanta />
+        <h2>MERRY CHRISTMAS</h2>
+      </LoadingDiv>
     </Flex>
   );
 }
