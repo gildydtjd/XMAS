@@ -1,6 +1,24 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const santaFade = keyframes`
+	0% {
+		transform : translateY(100%);
+	}
+	100% {
+		transform : none;
+	}
+`;
+
+const textFade = keyframes`
+	0% {
+		transform : translateY(100%);
+	}
+	100% {
+		transform : none;
+	}
+`;
 
 const Flex = styled.div`
   display: flex;
@@ -11,6 +29,13 @@ const Flex = styled.div`
 
 const LoadingDiv = styled.div`
   text-align: center;
+  h2 {
+    animation: ${textFade} 1s ease-in-out;
+  }
+`;
+
+const LoadingSantaDiv = styled.div`
+  overflow: hidden;
 `;
 
 const LoadingSanta = styled.div`
@@ -19,18 +44,22 @@ const LoadingSanta = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   height: 200px;
+  animation: ${santaFade} 1s ease-in-out;
 `;
 
 function Loading() {
   const history = useHistory();
 
-  useEffect(() => {
-    setTimeout(() => history.push('/Santa'), 2000);
-  }, [history]);
+  //   useEffect(() => {
+  //     setTimeout(() => history.push('/Santa'), 2000);
+  //   }, [history]);
+
   return (
     <Flex>
       <LoadingDiv>
-        <LoadingSanta />
+        <LoadingSantaDiv>
+          <LoadingSanta />
+        </LoadingSantaDiv>
         <h2>MERRY CHRISTMAS</h2>
       </LoadingDiv>
     </Flex>
