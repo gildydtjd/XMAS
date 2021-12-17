@@ -50,9 +50,9 @@ const LoadingSanta = styled.div`
 function Loading() {
   const history = useHistory();
 
-  //   useEffect(() => {
-  //     setTimeout(() => history.push('/Santa'), 2000);
-  //   }, [history]);
+    useEffect(() => {
+      setTimeout(() => history.push('/Santa'), 2000);
+    }, [history]);
 
   return (
     <Flex>
