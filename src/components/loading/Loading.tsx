@@ -51,7 +51,7 @@ function Loading() {
   const history = useHistory();
 
     useEffect(() => {
-      setTimeout(() => history.push('/Santa'), 2000);
+      setTimeout(() => history.push('/Santa'), 3000);
     }, [history]);
 
   return (
