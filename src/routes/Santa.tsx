@@ -15,6 +15,7 @@ const SantaDiv = styled.div`
   @media only screen and (max-width: 768px) {
     display: block;
     background-size: cover;
+    background-attachment: none;
   }
 `;
 

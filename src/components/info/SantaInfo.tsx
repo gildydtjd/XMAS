@@ -25,6 +25,7 @@ const SantaMoneyDiv = styled.div`
     }
   }
 `;
+
 interface Container {
   background: string;
 }
