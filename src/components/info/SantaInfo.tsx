@@ -55,10 +55,28 @@ const SantaInfoDiv = styled.div<Container>`
     color: #fff;
     text-align: center;
   }
+  .after_h2_one {
+    font-size: 80px;
+    color: #ff6e91;
+    text-align: center;
+  }
+
+  .after_h2_two {
+    font-size: 45px;
+  }
+
   @media only screen and (max-width: 768px) {
     h2 {
       font-size: 20px;
       padding: 10px;
+    }
+
+    .after_h2_one {
+      font-size: 20px;
+    }
+
+    .after_h2_two {
+      font-size: 20px;
     }
   }
 `;
@@ -109,9 +127,9 @@ function SantaInfo({ money, GiveMoney }: MoneyProps) {
       ) : (
         <>
           <SantaInfoDiv background={santaImg}>
-            <h2 style={{ color: '#ff6e91' }}>
+            <h2 className="after_h2_one">
               피싱 사기 피해 <br />
-              <h2 style={{ fontSize: '45px' }}>예방만이 최선의 방법입니다</h2>
+              <h2 className="after_h2_two">예방만이 최선의 방법입니다</h2>
             </h2>
           </SantaInfoDiv>
         </>
