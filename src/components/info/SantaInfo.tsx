@@ -24,10 +24,14 @@ const SantaMoneyDiv = styled.div`
   align-items: center;
   width: 100%;
   padding: 40px 0px;
-  h2 {
-    padding: 3%;
+  .money1 {
+    padding: 3% 1%;
     font-size: 40px;
     color: #ffffff;
+  }
+  .money2 {
+    font-size: 40px;
+    color: #ff6e91;
   }
   @media only screen and (max-width: 768px) {
     h2 {
@@ -60,11 +64,12 @@ const SantaInfoDiv = styled.div<Container>`
 `;
 
 const SantaGiveMoneyBtn = styled.button`
-  border: 0.5px solid #c9c9c9;
+  border: 4px solid #ff6e91;
   border-radius: 5px;
-  width: 100px;
-  height: 50px;
-  font-size: 20px;
+  width: 200px;
+  height: 100px;
+  font-size: 40px;
+  font-weight: 700;
   cursor: pointer;
   :hover {
     color: #ffffff;
@@ -90,7 +95,8 @@ function SantaInfo({ money, GiveMoney }: MoneyProps) {
       {money < 3 ? (
         <>
           <SantaMoneyDiv>
-            <h2>현재 후원금 : {money}억</h2>
+            <h2 className="money1">현재 후원금 :</h2>
+            <h2 className="money2">{money}억</h2>
           </SantaMoneyDiv>
           <SantaInfoDiv background={santaImg}>
             <h2>
@@ -101,7 +107,14 @@ function SantaInfo({ money, GiveMoney }: MoneyProps) {
           </SantaInfoDiv>
         </>
       ) : (
-        <SantaInfoDiv background={santaImg}></SantaInfoDiv>
+        <>
+          <SantaInfoDiv background={santaImg}>
+            <h2 style={{ color: '#ff6e91' }}>
+              피싱 사기 피해 <br />
+              <h2 style={{ fontSize: '45px' }}>예방만이 최선의 방법입니다</h2>
+            </h2>
+          </SantaInfoDiv>
+        </>
       )}
     </SantaInfoContainer>
   );
