@@ -10,6 +10,7 @@ const RudolfDiv = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
+  background-attachment: fixed;
 
   @media only screen and (max-width: 768px) {
     display: block;

@@ -9,36 +9,39 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+
 body::-webkit-scrollbar {
   display: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 .slide-appear,
-  .slide-enter {
-    z-index:1;
-    opacity: 0.9;
-    transform: translate3d(0, 100%, 0);
-  }
-  
-  .slide-appear-active,
-  .slide-enter.slide-enter-active {
-    opacity: 1;
-    transform: translate3d(0, 0,0);
-    transition: all 1000ms;
-  }
-  
-  .slide-exit {
-    opacity: 0;
-    transform: translate3d(0,0,0);
+.slide-enter {
+  z-index:1;
+  opacity: 0.9;
+  transform: translate3d(0, 100%, 0);
+}
 
-  }
+.slide-appear-active,
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0,0);
+  transition: all 1000ms;
+}
+
+.slide-exit {
+  opacity: 0;
+  transform: translate3d(0,0,0);
   
-  .slide-exit.slide-exit-active {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-  }
+}
+
+.slide-exit.slide-exit-active {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
