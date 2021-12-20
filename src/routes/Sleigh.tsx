@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import SleighInfo from '../components/info/SleighInfo';
 import Nav from '../components/nav/Nav';
 const SleighContainer = styled.div``;
 const SleighDiv = styled.div`
@@ -15,6 +14,7 @@ const SleighDiv = styled.div`
   @media only screen and (max-width: 768px) {
     display: block;
     background-size: cover;
+    background-attachment: scroll;
   }
 `;
 
@@ -24,7 +24,6 @@ function Sleigh() {
       <SleighDiv>
         <Nav />
       </SleighDiv>
-      <SleighInfo />
     </SleighContainer>
   );
 }

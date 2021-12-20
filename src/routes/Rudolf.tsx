@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import RudolfInfo from '../components/info/RudolfInfo';
 import Nav from '../components/nav/Nav';
 const RudolfContainer = styled.div``;
 const RudolfDiv = styled.div`
@@ -15,6 +14,7 @@ const RudolfDiv = styled.div`
   @media only screen and (max-width: 768px) {
     display: block;
     background-size: cover;
+    background-attachment: scroll;
   }
 `;
 
@@ -24,7 +24,6 @@ function Rudolf() {
       <RudolfDiv>
         <Nav />
       </RudolfDiv>
-      <RudolfInfo />
     </RudolfContainer>
   );
 }

@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+// 타입
+interface Container {
+  background: string;
+}
 
+type MoneyProps = {
+  money: number;
+  GiveMoney: () => void;
+};
+
+// 스타일
 const SantaInfoContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -25,10 +35,6 @@ const SantaMoneyDiv = styled.div`
     }
   }
 `;
-
-interface Container {
-  background: string;
-}
 
 const SantaInfoDiv = styled.div<Container>`
   height: 100vh;
@@ -68,25 +74,24 @@ const SantaGiveMoneyBtn = styled.button`
   }
 `;
 
-function SantaInfo() {
-  const [money, setMoney] = useState(1);
+function SantaInfo({ money, GiveMoney }: MoneyProps) {
   const [santaImg, setSantaImg] = useState('/assets/img/santa-info4.jpg');
-  const GiveMoney = () => {
-    setMoney(money + 1);
-  };
 
   useEffect(() => {
-    if (money > 4) {
+    if (money < 5) {
+      setSantaImg('assets/img/santa-info4.jpg');
+    } else {
       setSantaImg('assets/img/santa-info5.jpg');
     }
   }, [money]);
 
   return (
     <SantaInfoContainer>
-      <SantaMoneyDiv>
+      {money < 5 ? (
+        <>        
+        <SantaMoneyDiv>
         <h2>현재 후원금 : {money}억</h2>
       </SantaMoneyDiv>
-      {money < 5 ? (
         <SantaInfoDiv background={santaImg}>
           <h2>
             산타도 사람입니다 <br />
@@ -94,9 +99,11 @@ function SantaInfo() {
             <SantaGiveMoneyBtn onClick={GiveMoney}>GIVE</SantaGiveMoneyBtn>
           </h2>
         </SantaInfoDiv>
+        </>
       ) : (
         <SantaInfoDiv background={santaImg}></SantaInfoDiv>
       )}
+      
     </SantaInfoContainer>
   );
 }

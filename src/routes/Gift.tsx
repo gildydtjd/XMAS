@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import GiftInfo from '../components/info/GiftInfo';
 import Nav from '../components/nav/Nav';
 const GiftContainer = styled.div``;
 const GiftDiv = styled.div`
@@ -15,6 +14,7 @@ const GiftDiv = styled.div`
   @media only screen and (max-width: 768px) {
     display: block;
     background-size: cover;
+    background-attachment: scroll;
   }
 `;
 
@@ -24,7 +24,6 @@ function Gift() {
       <GiftDiv>
         <Nav />
       </GiftDiv>
-      <GiftInfo />
     </GiftContainer>
   );
 }
