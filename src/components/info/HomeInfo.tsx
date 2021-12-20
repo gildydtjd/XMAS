@@ -1,14 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-const HomeInfoDiv = styled.div`
-  height: 100vh;
-  width: 100%;
+import { InfoDiv } from '../../styles/styles';
 
-  @media only screen and (max-width: 768px) {
-  }
-`;
 function HomeInfo() {
-  return <HomeInfoDiv></HomeInfoDiv>;
+  return <InfoDiv></InfoDiv>;
 }
 
 export default HomeInfo;

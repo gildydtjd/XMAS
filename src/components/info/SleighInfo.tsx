@@ -1,14 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-const SleighInfoDiv = styled.div`
-  height: 100vh;
-  width: 100%;
+import { InfoDiv } from '../../styles/styles';
 
-  @media only screen and (max-width: 768px) {
-  }
-`;
 function SleighInfo() {
-  return <SleighInfoDiv></SleighInfoDiv>;
+  return <InfoDiv></InfoDiv>;
 }
 
 export default SleighInfo;
