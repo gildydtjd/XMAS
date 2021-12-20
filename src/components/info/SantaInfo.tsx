@@ -78,7 +78,7 @@ function SantaInfo({ money, GiveMoney }: MoneyProps) {
   const [santaImg, setSantaImg] = useState('/assets/img/santa-info4.jpg');
 
   useEffect(() => {
-    if (money < 5) {
+    if (money < 3) {
       setSantaImg('assets/img/santa-info4.jpg');
     } else {
       setSantaImg('assets/img/santa-info5.jpg');
@@ -87,23 +87,22 @@ function SantaInfo({ money, GiveMoney }: MoneyProps) {
 
   return (
     <SantaInfoContainer>
-      {money < 5 ? (
-        <>        
-        <SantaMoneyDiv>
-        <h2>현재 후원금 : {money}억</h2>
-      </SantaMoneyDiv>
-        <SantaInfoDiv background={santaImg}>
-          <h2>
-            산타도 사람입니다 <br />
-            <h2>산타에게 후원금을 보내주세요</h2>
-            <SantaGiveMoneyBtn onClick={GiveMoney}>GIVE</SantaGiveMoneyBtn>
-          </h2>
-        </SantaInfoDiv>
+      {money < 3 ? (
+        <>
+          <SantaMoneyDiv>
+            <h2>현재 후원금 : {money}억</h2>
+          </SantaMoneyDiv>
+          <SantaInfoDiv background={santaImg}>
+            <h2>
+              산타도 사람입니다 <br />
+              <h2>산타에게 후원금을 보내주세요</h2>
+              <SantaGiveMoneyBtn onClick={GiveMoney}>GIVE</SantaGiveMoneyBtn>
+            </h2>
+          </SantaInfoDiv>
         </>
       ) : (
         <SantaInfoDiv background={santaImg}></SantaInfoDiv>
       )}
-      
     </SantaInfoContainer>
   );
 }

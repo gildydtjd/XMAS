@@ -40,7 +40,7 @@ function Santa() {
   };
 
   useEffect(() => {
-    if (santaMoney < 5) {
+    if (santaMoney < 3) {
       setSantaImg('assets/img/santa.jpg');
     } else {
       setSantaImg('assets/img/santa-info7.jpg');
@@ -50,7 +50,7 @@ function Santa() {
   return (
     <SantaContainer>
       <SantaDiv background={santaImg}>
-        {santaMoney < 5 ? <Nav /> : <Scammer />}
+        {santaMoney < 3 ? <Nav /> : <Scammer />}
       </SantaDiv>
       <SantaInfo money={santaMoney} GiveMoney={MoneyUp} />
     </SantaContainer>
