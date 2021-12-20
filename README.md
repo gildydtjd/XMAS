@@ -2,8 +2,6 @@
 
 ![Christmas](https://user-images.githubusercontent.com/53888108/146392522-d683f9bb-bbce-43e3-bf19-4820c34522b0.jpg)
 
-- 설명
-
 <h2> 위 웹은 사용자의 피싱 사기에 대한 경각심을 일깨워 주기 위해 만든 웹이다. </h2>
 
 ![123](https://user-images.githubusercontent.com/53888108/146831108-5842ab44-4d48-461c-b6e2-ab13099939fe.JPG)
