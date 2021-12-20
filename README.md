@@ -12,7 +12,7 @@
 
 ![789](https://user-images.githubusercontent.com/53888108/146831116-6ec38d0f-dbca-4e1a-965d-48e2f1404814.JPG)
 
-2. 어느정도 기부가 이루워졌을 시 웹은 피싱 사기웹으로 바뀐다.
+2. 어느정도 기부가 이루어 졌을시 웹은 피싱 사기웹으로 바뀐다.
 
 - 사용 기술
 React, Redux , typeScript
